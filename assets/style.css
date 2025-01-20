@@ -43,8 +43,8 @@ body {
 .theme-box {
     background: #fff; /* 白色背景 */
     border: 2px solid #000; /* 黑色边框 */
-    width: 200%; /* 宽度占满容器 */
-    height: 10vh; /* 高度为视窗高度的 10% */
+    width: 250%; /* 宽度占满容器 */
+    height: 7vh; /* 高度为视窗高度的 10% */
     border-radius: 10px; /* 轻微圆角 */
     display: flex;
     align-items: center;
