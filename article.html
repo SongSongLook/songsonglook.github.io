@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <!-- 共用head部分 -->
+</head>
+<body>
+    <!-- 共用nav -->
+    
+    <article class="article-content">
+        <div class="article-meta">
+            <span class="topic-tag">人工智慧</span>
+            <time datetime="2023-01-01">2023年1月1日</time>
+        </div>
+        <h1 id="articleTitle"></h1>
+        <div id="articleContent"></div>
+    </article>
+
+    <!-- 共用footer -->
+    
+    <script>
+        // 根據URL參數加載文章內容
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+        
+        // 這裡應該從API或數據庫獲取真實數據
+        document.getElementById('articleTitle').textContent = '示例文章標題';
+        document.getElementById('articleContent').innerHTML = `
+            <p>文章內容...</p>
+        `;
+    </script>
+</body>
+</html>

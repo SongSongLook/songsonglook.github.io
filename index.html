@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-
+<html lang="zh-Hant-TW">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>FTMO Academy</title>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育知識平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
-
 <body>
-	<a href="index.html" class="banner-link">
-		<div class="banner">
-			<h1>FTMO Academy Solution</h1>
-		</div>
-	</a>
-	<div class="theme-container">
-		<a href="Basics.html" class="theme-box">Basics</a>
-		<a href="TradingAnalysis.html" class="theme-box">Trading Analysis</a>
-		<a href="Advanced.html" class="theme-box">Advanced</a>
-		<a href="FTMOEP.html" class="theme-box">FTMO Evaluation Process</a>
-	</div>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <h1 class="logo">EduTimes</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="搜尋文章...">
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </nav>
 
-	<div class="footer-text">
-		<p>© HEXAUX</p>
-		<p>ver.2024Q3<p>
-		</div>
+    <main class="content-wrapper">
+        <section class="topics-grid">
+            <!-- 動態生成主題區塊 -->
+        </section>
+
+        <section class="featured-articles">
+            <!-- 精選文章列表 -->
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2023 EduTimes. 版權所有。</p>
+    </footer>
+
+    <script src="js/view.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>

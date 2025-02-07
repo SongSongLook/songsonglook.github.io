@@ -1,0 +1,17 @@
+/* 懸停動畫 */
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 搜索框聚焦效果 */
+#searchInput:focus {
+    outline: none;
+    border-color: var(--white);
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* 文章卡片動畫延遲 */
+.article-card:nth-child(1) { animation-delay: 0.1s; }
+.article-card:nth-child(2) { animation-delay: 0.2s; }
+.article-card:nth-child(3) { animation-delay: 0.3s; }

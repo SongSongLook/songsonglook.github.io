@@ -1,0 +1,120 @@
+:root {
+    --black: #1a1a1a;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.main-nav {
+    background-color: var(--black);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+}
+
+.search-container {
+    position: relative;
+    width: 40%;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    transition: all var(--transition-speed);
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.topic-card {
+    border: 1px solid var(--gray);
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+
+.featured-articles {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.article-card {
+    border-bottom: 1px solid var(--gray);
+    padding: 1rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+}
