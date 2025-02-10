@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>教育知識平台</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新聞展示</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <h1 class="logo">EduTimes</h1>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="搜尋文章...">
-                <div class="search-results"></div>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <a href="index.html" class="logo">H4X3IS.Times</a>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="搜尋新聞">
+          </div>
+        <nav>
+          <ul class="nav-list">
+            <li data-category="all" class="active">ALL</li>
+            <li data-category="market">MARKET</li>
+            <li data-category="crypto">CRYPTO</li>
+            <li data-category="forex">FOREX</li>
+            <li data-category="TA">Technical Analysis</li>
+            <li data-category="etc">Others</li>
+          </ul>
+          <div class="mobile-menu" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+      
 
-    <main class="content-wrapper">
-        <section class="topics-grid">
-            <!-- 動態生成主題區塊 -->
-        </section>
+  <main>
+    <section class="news-container" id="news-container">
+      <!-- 新聞卡片會由 script.js 動態填入 -->
+    </section>
+  </main>
 
-        <section class="featured-articles">
-            <!-- 精選文章列表 -->
-        </section>
-    </main>
+  <footer>
+    <p>&copy; 2025 HEXAUX. All rights reserved.</p>
+  </footer>
 
-    <footer class="main-footer">
-        <p>&copy; 2023 EduTimes. 版權所有。</p>
-    </footer>
-
-    <script src="js/view.js"></script>
-    <script src="js/search.js"></script>
+  <!-- 先載入新聞資料，再載入首頁互動邏輯 -->
+  <script src="js/newsData.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

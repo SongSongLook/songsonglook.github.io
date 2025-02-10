@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="zh">
 <head>
-    <!-- 共用head部分 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章詳情</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 共用nav -->
-    
-    <article class="article-content">
-        <div class="article-meta">
-            <span class="topic-tag">人工智慧</span>
-            <time datetime="2023-01-01">2023年1月1日</time>
-        </div>
-        <h1 id="articleTitle"></h1>
-        <div id="articleContent"></div>
-    </article>
+  <header>
+    <a href="index.html" class="logo">H4X3IS.Times</a>
+    <nav>
+      <ul class="nav-list">
+        <li onclick="location.href='index.html'">回首頁</li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- 共用footer -->
-    
-    <script>
-        // 根據URL參數加載文章內容
-        const urlParams = new URLSearchParams(window.location.search);
-        const articleId = urlParams.get('id');
-        
-        // 這裡應該從API或數據庫獲取真實數據
-        document.getElementById('articleTitle').textContent = '示例文章標題';
-        document.getElementById('articleContent').innerHTML = `
-            <p>文章內容...</p>
-        `;
-    </script>
+  <main>
+    <article id="article-content">
+      <!-- 文章內容將由 article.js 動態填入 -->
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HEXAUX. All rights reserved.</p>
+  </footer>
+
+  <!-- 載入共用新聞資料與文章頁邏輯 -->
+  <script src="js/newsData.js"></script>
+  <script src="js/article.js"></script>
 </body>
 </html>

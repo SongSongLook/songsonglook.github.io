@@ -1,120 +1,191 @@
-:root {
-    --black: #1a1a1a;
-    --white: #ffffff;
-    --gray: #f5f5f5;
-    --transition-speed: 0.3s;
-}
-
+/* Reset 與基本設定 */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    color: var(--black);
-    background-color: var(--white);
-}
-
-.main-nav {
-    background-color: var(--black);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  body {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    font-family: serif, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* 頁首 */
+  header {
+    background: #000000;
+    color: #fff;
+    padding: 20px 10px;
+    display: flex;
     align-items: center;
-    padding: 0 2rem;
-}
-
-.logo {
-    color: var(--white);
-    font-size: 1.8rem;
-    letter-spacing: -1px;
-}
-
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    justify-content: space-between;
+  }
+  
+  a.logo {
+    text-decoration: none;  /* 移除底線 */
+    color: #ffffff;         /* 設定你想要的文字顏色 */
+    font-size: 2.0rem;
+  }  
+  
+  /* 搜尋欄樣式 */
 .search-container {
-    position: relative;
-    width: 40%;
-}
-
-#searchInput {
-    width: 100%;
-    padding: 0.8rem;
-    border: 2px solid var(--white);
-    background: transparent;
-    color: var(--white);
-    transition: all var(--transition-speed);
-}
-
-.content-wrapper {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
-
-.topics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.topic-card {
-    border: 1px solid var(--gray);
-    padding: 1.5rem;
-    cursor: pointer;
-    transition: transform var(--transition-speed);
-}
-
-.featured-articles {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.article-card {
-    border-bottom: 1px solid var(--gray);
-    padding: 1rem 0;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.main-footer {
-    background-color: var(--black);
-    color: var(--white);
+    margin: 10px;
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
-}
-
-/* 響應式設計 */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
+  }
+  
+  #search-input {
+    padding: 9px 16px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  /* 導覽列 */
+  nav {
+    position: relative;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    margin: 0 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .nav-list li:hover,
+  .nav-list li.active {
+    background: #555;
+    border-radius: 5px;
+  }
+  
+  /* 手機選單 */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .mobile-menu span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* 新聞內容區 */
+  .news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .news-card {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .news-card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .news-content {
+    padding: 15px;
+  }
+  
+  .news-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .news-content p {
+    color: #666;
+  }
+  
+  /* 文章詳情頁基本樣式 */
+  article {
+    padding: 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 5px;
+  }
+  
+  article h1 {
+    margin-bottom: 20px;
+  }
+  
+  article img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .article-body p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  /* 頁尾 */
+  footer {
+    background: #000000;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1.0rem;
+    text-align: right;
+  }
+  
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      background: #000000;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 150px;
+      border-radius: 5px;
     }
-
-    .search-container {
-        width: 100%;
+    .nav-list.active {
+      display: flex;
     }
-
-    .topics-grid {
-        grid-template-columns: 1fr;
+    .nav-list li {
+      margin: 10px 0;
     }
-}
+    .mobile-menu {
+      display: flex;
+    }
+  }
+  
