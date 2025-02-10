@@ -23,7 +23,6 @@
     color: #333;
   }
   
-  /* 頁首 */
   header {
     background: #000000;
     color: #fff;
@@ -33,7 +32,33 @@
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     justify-content: space-between;
+    position: -webkit-sticky; /* old browser */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  
+  footer {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #7a7a7a;
+    padding: 0px 0px 5px;
+    font-size: 1.0rem;
+    text-align: center;
+    line-height: 1.0rem;
+  }
+
+  .custom-divider {
+    border: none;                /* 先移除預設邊框 */
+    border-top: 2px solid #ccc;   /* 設定上邊框作為分割線 */
+    margin: 1px 0;              /* 設定上下間距 */
+    width: 80%;                  /* 可設定寬度 */
+    margin-left: auto;           /* 置中對齊 */
+    margin-right: auto;
+  }  
   
   a.logo {
     text-decoration: none;  /* 移除底線 */
@@ -150,20 +175,6 @@
     max-height: 400px;
     object-fit: cover;
     margin-bottom: 20px;
-  }
-  
-  .article-body p {
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-  
-  /* 頁尾 */
-  footer {
-    background: #000000;
-    color: #fff;
-    padding: 10px 0;
-    font-size: 1.0rem;
-    text-align: right;
   }
   
   /* 響應式設計 */

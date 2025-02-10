@@ -7,19 +7,11 @@
 const newsData = [
     {
       id: 1,
-      title: "Crypto",
+      title: "BTC weekly review",
       category: "crypto",
-      description: "AHA",
-      image: "",
-      fullContent: "nlnlowo"
+      description: "test 02/10/25 UTC+8",
+      image: "images/IMG_2458.PNG",
+      fullContent: ""
     },
-    {
-      id: 2,
-      title: "FOREX",
-      category: "forex",
-      description: "UwU",
-      image: "",
-      fullContent: "nlnlayaya"
-    }
   ];
   
