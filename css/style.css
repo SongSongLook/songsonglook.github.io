@@ -23,180 +23,118 @@
     color: #333;
   }
   
-  header {
-    background: #000000;
-    color: #fff;
-    padding: 20px 10px;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
-    justify-content: space-between;
-    position: -webkit-sticky; /* old browser */
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #000000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
   footer {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #7a7a7a;
+    color: #000000;
     padding: 0px 0px 5px;
     font-size: 1.0rem;
     text-align: center;
     line-height: 1.0rem;
   }
+/*---------------------------------------------------*/
+/* header-top */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;  /* 根據需求調整內邊距 */
+  background-color: #000000; /* 若希望背景一致，可設定相同背景色 */
+}
 
-  .custom-divider {
-    border: none;                /* 先移除預設邊框 */
-    border-top: 2px solid #ccc;   /* 設定上邊框作為分割線 */
-    margin: 1px 0;              /* 設定上下間距 */
-    width: 80%;                  /* 可設定寬度 */
-    margin-left: auto;           /* 置中對齊 */
-    margin-right: auto;
-  }  
-  
-  a.logo {
-    text-decoration: none;  /* 移除底線 */
-    color: #ffffff;         /* 設定你想要的文字顏色 */
-    font-size: 2.0rem;
-  }  
-  
-  /* 搜尋欄樣式 */
+a.logo {
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;  /* 根據需求調整顏色 */
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
 .search-container {
-    margin: 10px;
-    text-align: center;
+  width: 30%;
+  margin: 0;
+}
+
+#search-input {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/*---------------------------------------------------*/
+
+/* nav  */
+nav {
+  background-color: #ffffff; /* 可根據設計調整 */
+  padding: 5px 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* 導覽列樣式 */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* 或依需求對齊 */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-list li:hover,
+.nav-list li.active {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* 手機選單樣式 */
+.mobile-menu {
+  display: none; /* 根據響應式設計調整 */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mobile-menu span {
+  height: 3px;
+  width: 25px;
+  background: #000000;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+/*---------------------------------------------------*/
+
+/* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
+@media (max-width: 668px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  #search-input {
-    padding: 9px 16px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  .search-container {
     width: 80%;
-    max-width: 400px;
+    margin-top: 10px; /* 與 logo 分隔一點 */
   }
-  
-  /* 導覽列 */
-  nav {
-    position: relative;
+  #search-input {
+    font-size: 0.9rem;  /* 可根據需求調整 */
   }
-  
   .nav-list {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-list li {
-    margin: 0 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .nav-list li:hover,
-  .nav-list li.active {
-    background: #555;
-    border-radius: 5px;
-  }
-  
-  /* 手機選單 */
-  .mobile-menu {
     display: none;
     flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .mobile-menu span {
-    height: 3px;
-    width: 25px;
-    background: #fff;
-    margin: 4px 0;
-    transition: 0.3s;
-  }
-  
-  /* 新聞內容區 */
-  .news-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .news-card {
-    background: #fff;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
-  }
-  
-  .news-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .news-card img {
-    width: 100%;
-    display: block;
-  }
-  
-  .news-content {
-    padding: 15px;
-  }
-  
-  .news-content h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .news-content p {
-    color: #666;
-  }
-  
-  /* 文章詳情頁基本樣式 */
-  article {
-    padding: 20px;
-    background: #fff;
-    margin: 20px;
+    background: #000000;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
     border-radius: 5px;
   }
-  
-  article h1 {
-    margin-bottom: 20px;
+  .nav-list.active {
+    display: flex;
   }
-  
-  article img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    margin-bottom: 20px;
+  .mobile-menu {
+    display: flex;
   }
-  
-  /* 響應式設計 */
-  @media (max-width: 768px) {
-    .nav-list {
-      display: none;
-      flex-direction: column;
-      background: #000000;
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      width: 150px;
-      border-radius: 5px;
-    }
-    .nav-list.active {
-      display: flex;
-    }
-    .nav-list li {
-      margin: 10px 0;
-    }
-    .mobile-menu {
-      display: flex;
-    }
-  }
-  
+}
