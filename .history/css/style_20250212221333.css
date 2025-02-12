@@ -111,14 +111,6 @@ nav {
 }
 /*---------------------------------------------------*/
 
-.search-results {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
 @media (max-width: 668px) {
   .header-top {
@@ -148,8 +140,5 @@ nav {
   }
   .mobile-menu {
     display: flex;
-  }
-  .news-container {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
