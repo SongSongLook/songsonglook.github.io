@@ -39,7 +39,7 @@
   align-items: center;
   padding: 10px 20px;  /* 根據需求調整內邊距 */
   background-color: #000000; /* 若希望背景一致，可設定相同背景色 */
-  line-height: 300%;
+  line-height: 450%;
 }
 
 a.logo {
@@ -66,9 +66,9 @@ a.logo {
 
 /* nav  */
 nav {
-  background-color: #ffffff; /* 可根據設計調整 */
-  padding: 5px 20px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  background-color: #d5d5d5; /* 可根據設計調整 */
+  padding: 5px 30px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* 導覽列樣式 */
@@ -78,8 +78,10 @@ nav {
   justify-content: center; /* 或依需求對齊 */
   margin: 0;
   padding: 0;
+  line-height: 100%;
   font-weight: bold;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .nav-list li {
@@ -91,8 +93,8 @@ nav {
 
 .nav-list li:hover,
 .nav-list li.active {
-  background: #b4b4b4;
-  border-radius: 10%;
+  background: #606060;
+  border-radius: 5px;
 }
 
 /* 手機選單樣式 */
