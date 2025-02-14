@@ -2,7 +2,7 @@
 .news-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 20px;
   padding: 20px;
 }
 
@@ -52,7 +52,6 @@
 }
 
 .carousel-item {
-  background-color: rgb(214, 214, 214);
   min-width: 100%;
   box-sizing: border-box;
   padding: 10px;

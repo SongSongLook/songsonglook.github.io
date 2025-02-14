@@ -40,17 +40,3 @@
     object-fit: cover;
     margin-bottom: 20px;
   }
-
-  .tag-btn {
-    background: #eee;
-    border: none;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .tag-btn:hover {
-    background: #ddd;
-  }

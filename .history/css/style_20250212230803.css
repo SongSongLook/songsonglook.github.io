@@ -31,35 +31,23 @@
     text-align: center;
     line-height: 1.0rem;
   }
-  
 /*---------------------------------------------------*/
-
 /* header-top */
 .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 2%;  /* 根據需求調整內邊距 */
+  padding: 10px 20px;  /* 根據需求調整內邊距 */
   background-color: #000000; /* 若希望背景一致，可設定相同背景色 */
-  line-height: 450%;
+  line-height: 300%;
 }
 
 a.logo {
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
   color: #ffffff;  /* 根據需求調整顏色 */
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
-}
-
-.logo-2 {
-  text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
-  color: #000000;  /* 根據需求調整顏色 */
-  padding: 1% 20px;
-  font-size: 3.5rem;
-  font-weight: bold;
-  line-height: 75%;
 }
 
 .search-container {
@@ -74,21 +62,13 @@ a.logo {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-.search-results {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
 /*---------------------------------------------------*/
 
 /* nav  */
 nav {
-  background-color: #d5d5d5; /* 可根據設計調整 */
-  padding: 5px 30px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #ffffff; /* 可根據設計調整 */
+  padding: 5px 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 /* 導覽列樣式 */
@@ -98,10 +78,8 @@ nav {
   justify-content: center; /* 或依需求對齊 */
   margin: 0;
   padding: 0;
-  line-height: 100%;
   font-weight: bold;
   font-size: 1.1rem;
-  text-align: center;
 }
 
 .nav-list li {
@@ -113,8 +91,8 @@ nav {
 
 .nav-list li:hover,
 .nav-list li.active {
-  background: #606060;
-  border-radius: 5px;
+  background: #b4b4b4;
+  border-radius: 10%;
 }
 
 /* 手機選單樣式 */
@@ -131,25 +109,15 @@ nav {
   margin: 5px 0;
   transition: 0.3s;
 }
-
 /*---------------------------------------------------*/
 
-.custom-divider {
-  border: none;                /* 先移除預設邊框 */
-  border-top: 5px solid #ccc;   /* 設定上邊框作為分割線 */
-  width: 80%;                  /* 可設定寬度 */
-  margin-left: 20px;    
-}
-.custom-divider-2 {
-  border: none;                /* 先移除預設邊框 */
-  border-top: 2px solid #ccc;   /* 設定上邊框作為分割線 */
-  margin: 3px 0px 0px 0px;              /* 設定上下間距 */
-  width: 80%;                  /* 可設定寬度 */
-  margin-left: auto;           /* 置中對齊 */
-  margin-right: auto;
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
 
-/*---------------------------------------------------*/
 
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
 @media (max-width: 668px) {

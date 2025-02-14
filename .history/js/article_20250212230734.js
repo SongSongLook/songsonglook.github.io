@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 生成標籤按鈕區塊（點擊後回首頁並以該標籤過濾）
   let tagsHtml = "";
   if (article.tags && article.tags.length > 0) {
-    tagsHtml = `<div class="article-tags"><span><font face="Gill Sans"><b>TAGS: </b></font></span>`;
+    tagsHtml = `<div class="article-tags"><span>標籤: </span>`;
     article.tags.forEach(tag => {
       tagsHtml += `<button class="tag-btn" onclick="location.href='index.html?tag=${encodeURIComponent(tag)}'">${tag}</button>`;
     });
@@ -38,8 +38,3 @@ document.addEventListener("DOMContentLoaded", () => {
     ${tagsHtml}
   `;
 });
-
-
-//i beliebe inr the memory calss nmow  
-// but my heart goes to destroy the truth 
-//

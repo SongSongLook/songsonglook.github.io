@@ -17,7 +17,7 @@ const newsData = [
       <img src="https://via.placeholder.com/600x400?text=內文圖片" alt="內文圖片">
       <p>圖片說明：這是一張示意圖。也可以使用 <strong>加粗文字</strong> 來強調重點。</p>
     `,
-    tags: ["btc", "analysis"]
+    tags: ["政治", "featured"]
     },
     {
       id: 2,
