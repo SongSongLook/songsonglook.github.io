@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     li.addEventListener("click", function() {
       document.querySelectorAll(".nav-list li").forEach(el => el.classList.remove("active"));
       this.classList.add("active");
-      currentCategory = this.getAttribute("data-category");
+      currentCategory = this.getAttrbute("data-category");
       currentTag = ""; // 切換分類時取消標籤過濾
       renderNews(currentCategory, searchQuery, currentTag);
       const navList = document.querySelector(".nav-list");

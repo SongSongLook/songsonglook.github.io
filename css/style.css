@@ -12,6 +12,7 @@
   
   main {
     flex: 1;
+    position: relative;
   }
   
   body {
@@ -21,6 +22,7 @@
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    position: relative;
   }
   
   footer {
@@ -30,12 +32,14 @@
     font-size: 1.0rem;
     text-align: center;
     line-height: 1.0rem;
+    position: relative;
   }
   
 /*---------------------------------------------------*/
 
 /* header-top */
 .header-top {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,6 +57,7 @@ a.logo {
 }
 
 .logo-2 {
+  position: relative;
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
   color: #000000;  /* 根據需求調整顏色 */
@@ -60,6 +65,7 @@ a.logo {
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 75%;
+  z-index: 1;
 }
 
 .search-container {
@@ -119,7 +125,9 @@ nav {
 
 /* 手機選單樣式 */
 .mobile-menu {
+  position: relative;
   display: none; /* 根據響應式設計調整 */
+  z-index: 10;
   flex-direction: column;
   cursor: pointer;
 }

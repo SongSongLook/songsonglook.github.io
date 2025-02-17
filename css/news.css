@@ -40,10 +40,11 @@
 
 /* Carousel 輪播區 */
 .carousel-container {
-  position: relative;
   overflow: hidden;
   margin: 20px auto;
   max-width: 1200px;
+  position: relative;
+  z-index: 2;
 }
 
 .carousel {
@@ -61,6 +62,11 @@
 .carousel-item img {
   width: 100%;
   border-radius: 5px;
+}
+
+.carousel-item h3 {
+  font-size: 2rem;  /* 根據需要調整字體大小 */
+  margin: 10px 0;
 }
 
 /* 輪播箭頭 */
@@ -82,4 +88,10 @@
 
 .carousel-next {
   right: 10px;
+}
+
+@media (max-width: 668px) {
+  .carousel-item h3 {
+    font-size: 1.5rem;
+  }
 }

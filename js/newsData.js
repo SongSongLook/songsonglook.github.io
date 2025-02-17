@@ -10,7 +10,7 @@ const newsData = [
       title: "BTC weekly review",
       category: "crypto",
       description: "test 02/10/25 UTC+8",
-      image: "images/IMG_2458.PNG",
+      image: "images/截圖 2024-05-26 下午9.32.11.png",
       fullContent:  `
       <p>完整的政治新聞內容：詳細描述政治事件、背景與可能的影響，讓讀者獲得更深入的了解。</p>
       <p>在這裡你可以插入圖片：</p>
@@ -24,7 +24,7 @@ const newsData = [
       title: "BTC weekly review",
       category: "crypto",
       description: "test 02/10/25 UTC+8",
-      image: "images/IMG_2458.PNG",
+      image: "images/截圖 2024-05-26 下午9.32.11.png",
       fullContent:  `
       <p>完整的政治新聞內容：詳細描述政治事件、背景與可能的影響，讓讀者獲得更深入的了解。</p>
       <p>在這裡你可以插入圖片：</p>
@@ -38,7 +38,7 @@ const newsData = [
       title: "BTC weekly review",
       category: "crypto",
       description: "test 02/10/25 UTC+8",
-      image: "images/IMG_2458.PNG",
+      image: "images/截圖 2024-05-26 下午9.32.11.png",
       fullContent:  `
       <p>完整的政治新聞內容：詳細描述政治事件、背景與可能的影響，讓讀者獲得更深入的了解。</p>
       <p>在這裡你可以插入圖片：</p>
@@ -52,7 +52,7 @@ const newsData = [
       title: "BTC weekly review",
       category: "crypto",
       description: "test 02/10/25 UTC+8",
-      image: "images/IMG_2458.PNG",
+      image: "images/截圖 2024-05-26 下午9.32.11.png",
       fullContent:  `
       <p>完整的政治新聞內容：詳細描述政治事件、背景與可能的影響，讓讀者獲得更深入的了解。</p>
       <p>在這裡你可以插入圖片：</p>
