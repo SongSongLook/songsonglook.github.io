@@ -45,13 +45,11 @@
   max-width: 1200px;
   position: relative;
   z-index: 2;
-  border-radius: 5px;
 }
 
 .carousel {
   display: flex;
   transition: transform 0.5s ease;
-  border-radius: 5px;
 }
 
 .carousel-item {
@@ -59,7 +57,6 @@
   min-width: 100%;
   box-sizing: border-box;
   padding: 10px;
-  border-radius: 5px;
 }
 
 .carousel-item img {
@@ -69,9 +66,7 @@
 
 .carousel-item h3 {
   font-size: 2rem;  /* 根據需要調整字體大小 */
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bolder;
-  margin: 1px 0;
+  margin: 10px 0;
 }
 
 /* 輪播箭頭 */
