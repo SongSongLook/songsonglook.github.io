@@ -87,21 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (tagParam) {
     currentTag = tagParam;
   }
-
+  
   renderNews(currentCategory, searchQuery, currentTag);
   renderCarousel();
   
   document.querySelectorAll(".nav-list li").forEach(li => {
     li.addEventListener("click", function() {
-      // 切換 active 狀態
       document.querySelectorAll(".nav-list li").forEach(el => el.classList.remove("active"));
       this.classList.add("active");
-
-      currentCategory = this.getAttribute("data-category");
+      currentCategory = this.getAttrbute("data-category");
       currentTag = ""; // 切換分類時取消標籤過濾
       renderNews(currentCategory, searchQuery, currentTag);
-
-      // 手機選單選取後自動隱藏
       const navList = document.querySelector(".nav-list");
       if (navList.classList.contains("active")) {
         navList.classList.remove("active");
@@ -130,4 +126,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(() => {
     showSlide(currentSlide + 1);
   }, 3000);  // 3000 毫秒 = 3 秒
+  
 });

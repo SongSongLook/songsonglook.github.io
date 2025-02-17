@@ -8,7 +8,7 @@ const newsData = [
     {
       id: 1,
       title: "BTC weekly review",
-      category: "TA",
+      category: "market",
       description: "test 02/10/25 UTC+8",
       image: "images/截圖 2024-05-26 下午9.32.11.png",
       fullContent:  `
@@ -36,7 +36,7 @@ const newsData = [
     {
       id: 3,
       title: "BTC weekly review",
-      category: "QTT",
+      category: "crypto",
       description: "test 02/10/25 UTC+8",
       image: "images/截圖 2024-05-26 下午9.32.11.png",
       fullContent:  `

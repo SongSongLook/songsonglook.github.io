@@ -39,3 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 });
 
+
+//i beliebe inr the memory calss nmow  
+// but my heart goes to destroy the truth 
+//
