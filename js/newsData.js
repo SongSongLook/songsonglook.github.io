@@ -75,7 +75,7 @@ const carouselItems = [
   {
     type: "featured", // 其他 featured 文章項目
     id: 101,
-    image: "https://via.placeholder.com/300x200?text=Featured+News+1",
+    image: "images/截圖 2024-05-26 下午9.32.11.png",
     title: "Featured News Title 1"
   },
   {

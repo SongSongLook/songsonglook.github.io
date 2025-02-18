@@ -55,36 +55,35 @@ function renderCarousel() {
   const carousel = document.querySelector(".carousel");
   carousel.innerHTML = "";
 
-  // 新增一個專用的系列輪播項目：每週分析標普指數
-  const seriesTag = "每週分析標普指數"; // 定義系列標籤名稱
-  const seriesItem = document.createElement("div");
-  seriesItem.className = "carousel-item series-item";
-  seriesItem.innerHTML = `
-    <img src="path-to-series-image.jpg" alt="${seriesTag}">
-    <h3>${seriesTag}</h3>
-    <p>點擊查看最新每週更新</p>
-  `;
-  seriesItem.addEventListener("click", () => {
-    // 點擊後導向首頁並傳遞系列標籤參數，首頁會以此過濾出相關文章
-    window.location.href = "index.html?tag=" + encodeURIComponent(seriesTag);
-  });
-  carousel.appendChild(seriesItem);
-
-  // 接著載入其他具有 featured 標籤的文章
-  const featuredNews = newsData.filter(news => news.tags && news.tags.includes("featured"));
-  featuredNews.forEach(news => {
-    const item = document.createElement("div");
-    item.className = "carousel-item";
-    item.innerHTML = `
-      <img src="${news.image}" alt="${news.title}">
-      <h3>${news.title}</h3>
-    `;
-    item.addEventListener("click", () => {
-      window.location.href = "article.html?id=" + news.id;
-    });
-    carousel.appendChild(item);
+  // 依序處理 data.js 中定義的 carouselItems
+  carouselItems.forEach(item => {
+    const carouselItem = document.createElement("div");
+    carouselItem.className = "carousel-item";
+    
+    // 根據類型做不同處理
+    if (item.type === "series") {
+      carouselItem.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+      `;
+      carouselItem.addEventListener("click", () => {
+        window.location.href = "index.html?tag=" + encodeURIComponent(item.tag);
+      });
+    } else if (item.type === "featured") {
+      carouselItem.innerHTML = `
+        <img src="${item.image}" alt="${item.title}">
+        <h3>${item.title}</h3>
+      `;
+      carouselItem.addEventListener("click", () => {
+        window.location.href = "article.html?id=" + item.id;
+      });
+    }
+    
+    carousel.appendChild(carouselItem);
   });
 }
+
 
 
 function showSlide(index) {
