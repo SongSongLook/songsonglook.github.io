@@ -68,7 +68,7 @@ const carouselItems = [
   {
     type: "series",  // 系列專用項目
     tag: "每週分析標普指數",
-    image: "", // 請替換成實際圖片路徑
+    image: "images/截圖 2024-05-26 下午9.32.11.png",
     title: "每週分析標普指數",
     description: "點擊查看最新每週更新"
   },
@@ -81,7 +81,7 @@ const carouselItems = [
   {
     type: "featured",
     id: 102,
-    image: "https://via.placeholder.com/300x200?text=Featured+News+2",
+    image: "images/截圖 2024-05-26 下午9.32.11.png",
     title: "Featured News Title 2"
   }
   // 可以再新增更多項目
