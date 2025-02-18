@@ -68,7 +68,7 @@ const carouselItems = [
   {
     type: "series",  // 系列專用項目
     tag: "每週分析標普指數",
-    image: "path-to-series-image.jpg", // 請替換成實際圖片路徑
+    image: "", // 請替換成實際圖片路徑
     title: "每週分析標普指數",
     description: "點擊查看最新每週更新"
   },
