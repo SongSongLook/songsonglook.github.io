@@ -47,12 +47,31 @@ function renderNews(category = "all", search = "", tag = "") {
   });
 }
 
+/*---------------------------------------------------*/
+
 // 輪播功能：根據 "featured" 標籤選出文章
 let currentSlide = 0;
 function renderCarousel() {
   const carousel = document.querySelector(".carousel");
-  const featuredNews = newsData.filter(news => news.tags && news.tags.includes("featured"));
   carousel.innerHTML = "";
+
+  // 新增一個專用的系列輪播項目：每週分析標普指數
+  const seriesTag = "每週分析標普指數"; // 定義系列標籤名稱
+  const seriesItem = document.createElement("div");
+  seriesItem.className = "carousel-item series-item";
+  seriesItem.innerHTML = `
+    <img src="path-to-series-image.jpg" alt="${seriesTag}">
+    <h3>${seriesTag}</h3>
+    <p>點擊查看最新每週更新</p>
+  `;
+  seriesItem.addEventListener("click", () => {
+    // 點擊後導向首頁並傳遞系列標籤參數，首頁會以此過濾出相關文章
+    window.location.href = "index.html?tag=" + encodeURIComponent(seriesTag);
+  });
+  carousel.appendChild(seriesItem);
+
+  // 接著載入其他具有 featured 標籤的文章
+  const featuredNews = newsData.filter(news => news.tags && news.tags.includes("featured"));
   featuredNews.forEach(news => {
     const item = document.createElement("div");
     item.className = "carousel-item";
@@ -62,11 +81,11 @@ function renderCarousel() {
     `;
     item.addEventListener("click", () => {
       window.location.href = "article.html?id=" + news.id;
-      // 或依需求導向特定標籤頁面：location.href = "index.html?tag=" + encodeURIComponent("featured");
     });
     carousel.appendChild(item);
   });
 }
+
 
 function showSlide(index) {
   const carousel = document.querySelector(".carousel");
@@ -108,13 +127,42 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
-  const searchInput = document.getElementById("search-input");
-  searchInput.addEventListener("input", () => {
-    searchQuery = searchInput.value;
-    renderNews(currentCategory, searchQuery, currentTag);
+
+  const mobileMenu = document.getElementById("mobile-menu");
+  mobileMenu.addEventListener("click", () => {
+    document.querySelector(".nav-list").classList.toggle("active");
   });
-  
+
+  /*--------- 自動輪播與暫停功能---------*/
+  // 建立一個全域的 autoSlideInterval 變數
+  let autoSlideInterval = setInterval(() => {
+    showSlide(currentSlide + 1);
+  }, 3000);  // 每 3 秒切換一次
+
+  // 取得 carousel 容器元素
+  const carouselContainer = document.querySelector(".carousel-container");
+
+  // 當滑鼠進入或觸控開始時暫停自動輪播
+  carouselContainer.addEventListener("mouseenter", () => {
+    clearInterval(autoSlideInterval);
+  });
+  carouselContainer.addEventListener("touchstart", () => {
+    clearInterval(autoSlideInterval);
+  });
+
+  // 當滑鼠離開或觸控結束時重新啟動自動輪播
+  carouselContainer.addEventListener("mouseleave", () => {
+    autoSlideInterval = setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 3000);
+  });
+  carouselContainer.addEventListener("touchend", () => {
+    autoSlideInterval = setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 3000);
+  });
+
+  /*--------- 輪播箭頭事件 ---------*/
   document.querySelector(".carousel-prev").addEventListener("click", () => {
     showSlide(currentSlide - 1);
   });
@@ -122,12 +170,11 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentSlide + 1);
   });
   
-  const mobileMenu = document.getElementById("mobile-menu");
-  mobileMenu.addEventListener("click", () => {
-    document.querySelector(".nav-list").classList.toggle("active");
+  /*------------------------------------------*/
+  const searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("input", () => {
+    searchQuery = searchInput.value;
+    renderNews(currentCategory, searchQuery, currentTag);
   });
-  // 自動輪播設定：每3秒自動切換下一張
-  setInterval(() => {
-    showSlide(currentSlide + 1);
-  }, 3000);  // 3000 毫秒 = 3 秒
 });
+  

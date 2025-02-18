@@ -62,4 +62,27 @@ const newsData = [
     tags: ["政治", "featured"]
     }
   ];
-  
+
+  // 定義 carousel 資料
+const carouselItems = [
+  {
+    type: "series",  // 系列專用項目
+    tag: "每週分析標普指數",
+    image: "path-to-series-image.jpg", // 請替換成實際圖片路徑
+    title: "每週分析標普指數",
+    description: "點擊查看最新每週更新"
+  },
+  {
+    type: "featured", // 其他 featured 文章項目
+    id: 101,
+    image: "https://via.placeholder.com/300x200?text=Featured+News+1",
+    title: "Featured News Title 1"
+  },
+  {
+    type: "featured",
+    id: 102,
+    image: "https://via.placeholder.com/300x200?text=Featured+News+2",
+    title: "Featured News Title 2"
+  }
+  // 可以再新增更多項目
+];

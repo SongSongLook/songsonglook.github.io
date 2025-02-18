@@ -44,12 +44,12 @@
   margin: 20px auto;
   max-width: 1200px;
   position: relative;
-  z-index: 2;
   border-radius: 5px;
 }
 
 .carousel {
   display: flex;
+  position: relative;
   transition: transform 0.5s ease;
   border-radius: 5px;
 }
