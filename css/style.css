@@ -211,8 +211,8 @@ nav {
     background: #acacac;
     font-weight: bold;
     position: absolute;
-    top: 120px;
-    right: 20px;
+    top: 10%;
+    right: 0px;
     width: 150px;
     border-radius: 5px;
   }
