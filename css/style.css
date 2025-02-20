@@ -69,14 +69,7 @@ a.logo {
   width: 30%;
   margin: 0;
   z-index: 101;
-}
-
-#search-input {
-  width: 100%;
-  padding: 5px 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  position: relative;  
 }
 
 .search-results {
@@ -85,6 +78,42 @@ a.logo {
   gap: 20px;
   padding: 20px;
 }
+
+/* 讓搜尋表單中的元素同列顯示 */
+#search-form {
+  display: flex;
+  align-items: center;
+}
+
+/* 搜尋輸入框 */
+#search-input {
+  flex: 1;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* 搜尋按鈕，利用放大鏡圖案 */
+.search-btn {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid #000000;
+  border-left: 5px; /* 與輸入框連接 */
+  background-color: #000000;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-btn img {
+  width: 20px;
+  height: 20px;
+}
+
 
 /*---------------------------------------------------*/
 

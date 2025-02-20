@@ -170,10 +170,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   /*------------------------------------------*/
-  const searchInput = document.getElementById("search-input");
-  searchInput.addEventListener("input", () => {
-    searchQuery = searchInput.value;
-    renderNews(currentCategory, searchQuery, currentTag);
+  const searchForm = document.getElementById("search-form");
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const query = document.getElementById("search-input").value.trim();
+    if (query) {
+      // 導向搜尋結果頁，並將搜尋關鍵字以 q 為參數傳遞
+      window.location.href = "search.html?q=" + encodeURIComponent(query);
+    }
   });
 });
-  
+
+
