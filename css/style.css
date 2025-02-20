@@ -45,7 +45,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 2%;  /* 根據需求調整內邊距 */
+  padding: 5% 3%;  /* 根據需求調整內邊距 */
   background-color: #000000; /* 若希望背景一致，可設定相同背景色 */
   line-height: 450%;
 }
@@ -71,7 +71,7 @@ a.logo {
 
 .search-container {
   width: 30%;
-  margin: 0;
+  margin: 3% 0;
   z-index: 101;
   position: relative;  
 }
