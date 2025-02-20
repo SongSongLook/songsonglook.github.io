@@ -1,5 +1,5 @@
-// get URL query parameter
-function getQueryParameter(name){
+// 取得 URL 參數的函式
+function getQueryParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
   }
@@ -9,18 +9,17 @@ function getQueryParameter(name){
     const container = document.getElementById("search-results");
     container.innerHTML = "";
   
-    // 過濾 newsData（假設 newsData 在 data.js 或 newsData.js 中已定義）
     let results = newsData.filter(news =>
       news.title.toLowerCase().includes(query.toLowerCase()) ||
       news.description.toLowerCase().includes(query.toLowerCase())
     );
   
     if (results.length === 0) {
-      container.innerHTML = `<p>No results found for "${query}"</p>`;
+      container.innerHTML = `<p>沒有找到符合 "${query}" 的結果。</p>`;
     } else {
       results.forEach(news => {
         const card = document.createElement("div");
-        card.className = "news-card";
+        card.className = "news-card-search";
         card.innerHTML = `
           <img src="${news.image}" alt="${news.title}">
           <div class="news-content">
@@ -38,11 +37,15 @@ function getQueryParameter(name){
   
   document.addEventListener("DOMContentLoaded", () => {
     const query = getQueryParameter("q");
+    const searchQueryElem = document.getElementById("search-query");
+    
     if (query) {
+      // 顯示搜尋內容
+      searchQueryElem.textContent = `搜尋結果：${query}`;
       renderSearchResults(query);
     } else {
-      document.getElementById("search-results").innerHTML = "<p>Please enter a search query.</p>";
+      searchQueryElem.textContent = "請輸入搜尋內容";
+      document.getElementById("search-results").innerHTML = "<p>沒有搜尋內容。</p>";
     }
   });
   
-

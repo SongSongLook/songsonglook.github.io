@@ -38,6 +38,26 @@
   color: #666;
 }
 
+.news-card-search {
+  max-width: 80%;
+  border-radius: 5px;
+  align-content: center;
+  background: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.news-card-search:hover {
+  transform: translateY(0px);
+}
+
+.news-card-search img {
+  width: 100%;
+  display: block;
+}
+
 /* Carousel 輪播區 */
 .carousel-container {
   overflow: hidden;
