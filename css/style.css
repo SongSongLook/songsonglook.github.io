@@ -23,6 +23,7 @@
     background-color: #f4f4f4;
     color: #333;
     position: relative;
+    padding-top: 200px;
   }
   
   footer {
@@ -35,19 +36,25 @@
     position: relative;
   }
   
-  header{
-    max-width: 100%;
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
   
 /*---------------------------------------------------*/
 
 .header-top {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5% 3%;  /* 根據需求調整內邊距 */
   background-color: #000000; /* 若希望背景一致，可設定相同背景色 */
   line-height: 450%;
+  z-index: 3;
+  
 }
 
 a.logo {
@@ -123,9 +130,11 @@ a.logo {
 
 /* nav  */
 nav {
+  transition: transform 0.3s ease;
   position: relative;
   background-color: #d5d5d5; /* 可根據設計調整 */
   padding: 1px 5px;
+  z-index: 1;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
