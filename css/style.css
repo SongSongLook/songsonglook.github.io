@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     font-family: serif, sans-serif;
-    line-height: 1.6;
+    line-height: 1.3;
     background-color: #f4f4f4;
     color: #333;
     position: relative;
@@ -206,6 +206,9 @@ i believe in the moments calls now but my heart goes to destroy the truth
 
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
 @media (max-width: 668px) {
+  body{
+    padding-top: 130px;
+  }
   .header-top {
     flex-direction: column;
     align-items: center;
