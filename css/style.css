@@ -50,10 +50,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 3%;  /* 根據需求調整內邊距 */
+  padding: 3% 3%;  /* 根據需求調整內邊距 */
   background-color: #000000; /* 若希望背景一致，可設定相同背景色 */
   line-height: 450%;
   z-index: 3;
+  max-height: 140px;
+  max-width: 100%;
   
 }
 
@@ -199,7 +201,8 @@ nav {
   margin-right: auto;
 }
 
-/*---------------------------------------------------*/
+/*---------------------------------------------------*／
+i believe in the moments calls now but my heart goes to destroy the truth
 
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
 @media (max-width: 668px) {
@@ -230,6 +233,9 @@ nav {
   }
   .mobile-menu {
     display: flex;
+    position: absolute;
+    top: 10px;
+    right: 20px;
   }
   .news-container {
     grid-template-columns: repeat(1, 1fr);
