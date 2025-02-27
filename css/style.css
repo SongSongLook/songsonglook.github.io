@@ -108,6 +108,11 @@ a.logo {
   outline: none;
 }
 
+#search-query {
+  font-size: 3rem;
+  padding-left: 5px;
+}
+
 /* 搜尋按鈕，利用放大鏡圖案 */
 .search-btn {
   margin-left: 8px;
@@ -159,7 +164,6 @@ nav {
   margin: 5px 0.3rem;
   padding: 8px 0.3rem;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 .nav-list li:hover,

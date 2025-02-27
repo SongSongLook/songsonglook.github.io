@@ -15,7 +15,7 @@ function getQueryParameter(name) {
     );
   
     if (results.length === 0) {
-      container.innerHTML = `<p>沒有找到符合 "${query}" 的結果。</p>`;
+      container.innerHTML = `<p>Nothing match "${query}" TT</p>`;
     } else {
       results.forEach(news => {
         const card = document.createElement("div");
