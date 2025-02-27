@@ -13,7 +13,6 @@
   main {
     flex: 1;
     position: relative;
-    align-self: start;
   }
   
   body {
@@ -41,7 +40,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 100%;
     z-index: 1000;
   }
   
