@@ -41,11 +41,11 @@ function getQueryParameter(name) {
     
     if (query) {
       // 顯示搜尋內容
-      searchQueryElem.textContent = `搜尋結果：${query}`;
+      searchQueryElem.textContent = `Results：${query}`;
       renderSearchResults(query);
     } else {
-      searchQueryElem.textContent = "請輸入搜尋內容";
-      document.getElementById("search-results").innerHTML = "<p>沒有搜尋內容。</p>";
+      searchQueryElem.textContent = "Enter something";
+      document.getElementById("search-results").innerHTML = "<p>Nothing here.</p>";
     }
   });
   

@@ -8,6 +8,7 @@
 
 /* News Card 樣式 */
 .news-card {
+  padding-bottom: 0;
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
@@ -43,10 +44,12 @@
   border-radius: 5px;
   align-content: center;
   background: #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   cursor: pointer;
+  margin-top: 10px;
+  margin-left: 8px;
 }
 
 .news-card-search:hover {
@@ -57,6 +60,7 @@
   width: 100%;
   display: block;
 }
+
 
 /* Carousel 輪播區 */
 .carousel-container {

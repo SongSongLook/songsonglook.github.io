@@ -202,11 +202,10 @@ nav {
 }
 
 /*---------------------------------------------------*／
-i believe in the moments calls now but my heart goes to destroy the truth
 
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
 @media (max-width: 668px) {
-  body{
+  body {
     padding-top: 130px;
   }
   .header-top {
@@ -242,5 +241,17 @@ i believe in the moments calls now but my heart goes to destroy the truth
   }
   .news-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.search-page {
+  .search-header {
+    padding-top: 15px;
+    font-size: 1.3rem;
+  }
+  .custom-divider{
+    border-top: 3px solid #ccc;
+    padding-bottom: 15px;
+    margin-left: 0
   }
 }
