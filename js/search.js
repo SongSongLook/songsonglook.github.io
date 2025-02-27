@@ -45,7 +45,7 @@ function getQueryParameter(name) {
       renderSearchResults(query);
     } else {
       searchQueryElem.textContent = "Enter something";
-      document.getElementById("search-results").innerHTML = "<p>Nothing here.</p>";
+      document.getElementById("search-results").innerHTML = "<p>Nothing here</p>";
     }
   });
   
