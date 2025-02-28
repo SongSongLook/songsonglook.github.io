@@ -210,7 +210,19 @@ nav {
   margin-right: auto;
 }
 
-/*---------------------------------------------------*／
+/*---------------------------------------------------*/
+
+.search-page {
+  .search-header {
+    padding-top: 15px;
+    font-size: 1.3rem;
+  }
+  .custom-divider{
+    border-top: 3px solid #ccc;
+    padding-bottom: 15px;
+    margin-left: 0
+  }
+}
 
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
 @media (max-width: 668px) {
@@ -220,6 +232,9 @@ nav {
   .header-top {
     flex-direction: column;
     align-items: center;
+  }
+  a.logo {
+    font-size: 300%;
   }
   .search-container {
     width: 80%;
@@ -253,14 +268,3 @@ nav {
   }
 }
 
-.search-page {
-  .search-header {
-    padding-top: 15px;
-    font-size: 1.3rem;
-  }
-  .custom-divider{
-    border-top: 3px solid #ccc;
-    padding-bottom: 15px;
-    margin-left: 0
-  }
-}
