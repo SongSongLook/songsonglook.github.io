@@ -137,7 +137,6 @@ a.logo {
   height: 20px;
 }
 
-
 /*---------------------------------------------------*/
 
 /* nav  */
@@ -173,8 +172,8 @@ nav {
 
 .nav-list li:hover,
 .nav-list li.active {
-  background: #606060;
-  border-radius: 5px;
+  background: #7d7c7c;
+  border-radius: 3px;
 }
 
 /* 手機選單樣式 */
@@ -220,7 +219,6 @@ nav {
   .custom-divider{
     border-top: 3px solid #ccc;
     padding-bottom: 15px;
-    margin-left: 0
   }
 }
 
@@ -244,6 +242,7 @@ nav {
     font-size: 0.9rem;  /* 可根據需求調整 */
   }
   .nav-list {
+    margin: 3px 3px 0 0;
     display: none;
     flex-direction: column;
     background: #acacac;
@@ -253,6 +252,7 @@ nav {
     right: 0px;
     width: 150px;
     border-radius: 5px;
+    border: 3px solid black;
   }
   .nav-list.active {
     display: flex;
