@@ -153,9 +153,9 @@ const newsData = [
 const carouselItems = [
   {
     type: "series",  // series 
-    tag: "每週分析標普指數",
+    tag: "snp500",
     image: "images/截圖 2024-05-26 下午9.32.11.png",
-    title: "每週分析標普指數",
+    title: "Weekly S&P500 analysis",
     description: "點擊查看最新每週更新"
   },
   {
