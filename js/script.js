@@ -51,6 +51,8 @@ function renderNews(category = "all", search = "", tag = "") {
 
 // 輪播功能：根據 "featured" 標籤選出文章
 let currentSlide = 0;
+let selectedSeriesTag = "";
+
 function renderCarousel() {
   const carousel = document.querySelector(".carousel");
   carousel.innerHTML = "";
@@ -68,7 +70,10 @@ function renderCarousel() {
         <p>${item.description}</p>
       `;
       carouselItem.addEventListener("click", () => {
-        window.location.href = "index.html?tag=" + encodeURIComponent(item.tag);
+        history.pushState(null, '', "index.html?tag=" + encodeURIComponent(item.tag));
+        // 更新頁面內容
+        document.querySelector(".logo-2").textContent = item.tag;
+        renderNews(currentCategory, searchQuery, item.tag);
       });
     } else if (item.type === "featured") {
       carouselItem.innerHTML = `
@@ -79,9 +84,15 @@ function renderCarousel() {
         window.location.href = "article.html?id=" + item.id;
       });
     }
-    
     carousel.appendChild(carouselItem);
   });
+
+  if (selectedSeriesTag) {
+    document.querySelector(".logo-2").textContent = selectedSeriesTag;
+  } else {
+    document.querySelector(".logo-2").textContent = "News";
+  }
+
   updatePagination();
 }
 
