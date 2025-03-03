@@ -5,6 +5,7 @@
 //--TA
 //--etc
 
+
 // news data restore
 const newsData = [
     {
@@ -156,7 +157,7 @@ const carouselItems = [
     tag: "snp500",
     image: "images/截圖 2024-05-26 下午9.32.11.png",
     title: "Weekly S&P500 analysis",
-    description: "點擊查看最新每週更新"
+    description: "click here to find the truth "
   },
   {
     type: "featured", // display specific article 

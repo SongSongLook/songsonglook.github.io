@@ -120,6 +120,40 @@
   right: 10px;
 }
 
+.carousel-container {
+  position: relative;  /* 讓內部的 absolute 元素以此為參考 */
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Pagination 區塊的樣式 */
+.carousel-pagination {
+  position: absolute;
+  bottom: 10px;           /* 根據需求調整距離底部的距離 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;            /* 確保位於其他元素上方 */
+  text-align: center;
+  color: #fff;            /* 可視需要調整文字顏色 */
+}
+
+.pagination-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination-dots .dot.active {
+  background: #333;
+}
+
+
 @media (max-width: 668px) {
   .carousel-item h3 {
     font-size: 1.5rem;

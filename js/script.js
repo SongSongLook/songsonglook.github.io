@@ -82,6 +82,7 @@ function renderCarousel() {
     
     carousel.appendChild(carouselItem);
   });
+  updatePagination();
 }
 
 function showSlide(index) {
@@ -95,6 +96,7 @@ function showSlide(index) {
     currentSlide = index;
   }
   carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+  updatePagination();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -166,7 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".carousel-next").addEventListener("click", () => {
     showSlide(currentSlide + 1);
   });
-  
+
+
   /*------------------------------------------*/
   const searchForm = document.getElementById("search-form");
   searchForm.addEventListener("submit", (e) => {
@@ -178,6 +181,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function updatePagination() {
+  const carousel = document.querySelector(".carousel");
+  const totalSlides = carousel.children.length;
+  // 更新文字：顯示目前頁數和總頁數
+  const paginationInfo = document.getElementById("pagination-info");
+  if (paginationInfo) {
+    paginationInfo.textContent = (currentSlide + 1) + " / " + totalSlides;
+  }
+  
+  // 更新 dots
+  const dotsContainer = document.querySelector(".pagination-dots");
+  if (dotsContainer) {
+    dotsContainer.innerHTML = ""; // 清空舊的 dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === currentSlide) {
+        dot.classList.add("active");
+      }
+      // 點擊 dot 時可直接切換到該頁
+      dot.addEventListener("click", () => {
+        showSlide(i);
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+}
 
 /*---------------------------------------------------*/
 
