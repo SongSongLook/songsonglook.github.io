@@ -15,7 +15,7 @@ function getQueryParameter(name) {
     );
   
     if (results.length === 0) {
-      container.innerHTML = `<p>Nothing match "${query}" TT</p>`;
+      container.innerHTML = `<p>Nothing match: "<font size="10px">${query}</font>"</p>`;
     } else {
       results.forEach(news => {
         const card = document.createElement("div");
@@ -24,7 +24,7 @@ function getQueryParameter(name) {
           <img src="${news.image}" alt="${news.title}">
           <div class="news-content">
             <h3>${news.title}</h3>
-            <p>${newo,ms.description}</p>
+            <p>${news.description}</p>
           </div>
         `;
         card.addEventListener("click", () => {
@@ -40,7 +40,6 @@ function getQueryParameter(name) {
     const searchQueryElem = document.getElementById("search-query");
     
     if (query) {
-      // 顯示搜尋內容
       searchQueryElem.textContent = `Results：${query}`;
       renderSearchResults(query);
     } else {

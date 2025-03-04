@@ -118,6 +118,9 @@ a.logo {
   padding-left: 5px;
 }
 
+#search-results {
+  text-align: center;
+}
 /* 搜尋按鈕，利用放大鏡圖案 */
 .search-btn {
   margin-left: 8px;
