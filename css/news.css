@@ -131,7 +131,7 @@
 .carousel-pagination {
   position: absolute;
   bottom: 10px;           /* 根據需求調整距離底部的距離 */
-  left: 50%;
+  left: 90%;
   transform: translateX(-50%);
   z-index: 10;            /* 確保位於其他元素上方 */
   text-align: center;
@@ -150,7 +150,7 @@
 }
 
 .pagination-dots .dot.active {
-  background: #333;
+  background: #585858;
 }
 
 

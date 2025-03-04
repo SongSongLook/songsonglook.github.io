@@ -24,7 +24,7 @@ function getQueryParameter(name) {
           <img src="${news.image}" alt="${news.title}">
           <div class="news-content">
             <h3>${news.title}</h3>
-            <p>${news.description}</p>
+            <p>${newo,ms.description}</p>
           </div>
         `;
         card.addEventListener("click", () => {
@@ -48,4 +48,3 @@ function getQueryParameter(name) {
       document.getElementById("search-results").innerHTML = "<p>Nothing here</p>";
     }
   });
-  
