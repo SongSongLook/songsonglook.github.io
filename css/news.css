@@ -125,10 +125,12 @@
   overflow: hidden;
   margin: 20px auto;
   max-width: 1200px;
+
 }
 
 /* Pagination 區塊的樣式 */
 .carousel-pagination {
+  dispalay: flex;
   position: absolute;
   bottom: 10px;           /* 根據需求調整距離底部的距離 */
   left: 90%;
@@ -136,12 +138,13 @@
   z-index: 10;            /* 確保位於其他元素上方 */
   text-align: center;
   color: #fff;            /* 可視需要調整文字顏色 */
+  min-width: 300px;
 }
 
 .pagination-dots .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 0.5rem;
+  height: 0.5rem;
   background: #ffffff;
   border-radius: 50%;
   margin: 0 4px;

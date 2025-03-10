@@ -34,7 +34,7 @@ function getQueryParameter(name) {
       });
     }
   }
-  
+
   document.addEventListener("DOMContentLoaded", () => {
     const query = getQueryParameter("q");
     const searchQueryElem = document.getElementById("search-query");
