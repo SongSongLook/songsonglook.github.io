@@ -120,27 +120,25 @@ document.addEventListener("DOMContentLoaded", () => {
   renderNews(currentCategory, searchQuery, currentTag);
   renderCarousel();
   
-  document.querySelectorAll(".nav-list li").forEach(li => {
+  document.querySelectorAll(".mobile-nav-list li").forEach(li => {
     li.addEventListener("click", function() {
       // 切換 active 狀態
-      document.querySelectorAll(".nav-list li").forEach(el => el.classList.remove("active"));
+      document.querySelectorAll(".mobile-nav-list li").forEach(el => el.classList.remove("active"));
       this.classList.add("active");
 
       currentCategory = this.getAttribute("data-category");
       currentTag = ""; // 切換分類時取消標籤過濾
       renderNews(currentCategory, searchQuery, currentTag);
-
-      // 手機選單選取後自動隱藏
-      const navList = document.querySelector(".nav-list");
-      if (navList.classList.contains("active")) {
-        navList.classList.remove("active");
-      }
+      // 隱藏 sidebar
+      const sidebar = document.getElementById("sidebar-menu");
+      sidebar.classList.remove("active");
     });
   });
 
   const mobileMenu = document.getElementById("mobile-menu");
+  const sidebarMenu = document.getElementById("sidebar-menu");
   mobileMenu.addEventListener("click", () => {
-    document.querySelector(".nav-list").classList.toggle("active");
+    sidebarMenu.classList.toggle("active");
   });
 
   /*--------- 自動輪播與暫停功能---------*/

@@ -86,12 +86,10 @@
   padding: 10px;
   border-radius: 5px;
 }
-
 .carousel-item img {
   width: 100%;
   border-radius: 5px;
 }
-
 .carousel-item h3 {
   font-size: 2rem;  /* 根據需要調整字體大小 */
   font-family: 'Times New Roman', Times, serif;
@@ -111,19 +109,16 @@
   cursor: pointer;
   z-index: 10;
 }
-
 .carousel-prev {
   left: 10px;
 }
-
 .carousel-next {
   right: 10px;
 }
-
 .carousel-container {
   position: relative;  /* 讓內部的 absolute 元素以此為參考 */
   overflow: hidden;
-  margin: 20px auto;
+  margin: 0px auto;
   max-width: 1200px;
 
 }
@@ -156,7 +151,7 @@
 }
 
 
-@media (max-width: 668px) {
+@media (max-width: 758px) {
   .carousel-item h3 {
     font-size: 1.5rem;
   }

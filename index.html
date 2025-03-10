@@ -13,20 +13,21 @@
     <!-- First column：logo and search container -->
     <div class="header-top">
       <a href="index.html" class="logo">3X4IS.Times</a>
-
-      <div class="search-container">
-        <form id="search-form">
-          <input type="text" name="q" id="search-input" placeholder="Search">
-          <button type="submit" class="search-btn">
-            <img src="images/magnifying-glass-3-512.png" alt="Search">
-          </button>
-        </form>
-      </div>
-      
-      <div class="mobile-menu" id="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="header-right">
+        <!-- 手機選單圖示，放在搜尋欄左側 -->
+        <div class="mobile-menu" id="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="search-container">
+          <form id="search-form">
+            <input type="text" name="q" id="search-input" placeholder="Search">
+            <button type="submit" class="search-btn">
+              <img src="images/magnifying-glass-3-512.png" alt="Search">
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -44,7 +45,18 @@
   
   </header>
 
+
   <main>
+    <section class="sidebar-menu" id="sidebar-menu">
+      <ul class="mobile-nav-list">
+        <li data-category="all">ALL</li>
+        <li data-category="market">MARKET</li>
+        <li data-category="crypto">CRYPTO</li>
+        <li data-category="QTT">Quantum Trade Tutor</li>
+        <li data-category="TA">Technical Analysis</li>
+        <li data-category="etc">Others</li>
+      </ul>
+    </section>
 
     <section class="carousel-container">
       <section class="carousel">

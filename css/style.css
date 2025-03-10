@@ -1,3 +1,6 @@
+:root {
+  --header-height: 100px;
+}
 /* Reset 與基本設定 */
 * {
     box-sizing: border-box;
@@ -10,6 +13,16 @@
     margin: 0;
   }
   
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1000;
+    margin: 0 auto;
+    max-height: 140px;
+  }
+
   main {
     flex: 1;
     position: relative;
@@ -26,7 +39,7 @@
     background-color: #f4f4f4;
     color: #333;
     position: relative;
-    padding-top: 220px;
+    padding-top: 195px;
   }
   
   footer {
@@ -39,14 +52,6 @@
     position: relative;
   }
   
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 100%;
-    z-index: 1000;
-    margin: 0 auto;
-  }
   
 /*---------------------------------------------------*/
 
@@ -57,11 +62,17 @@
   align-items: center;
   padding: 3% 3%;  /* 根據需求調整內邊距 */
   background-color: #000000; /* 若希望背景一致，可設定相同背景色 */
-  line-height: 450%;
+  line-height: 50% auto;
   z-index: 3;
   max-height: 140px;
   max-width: 100%;
   
+}
+
+/* .header-right：將 mobile-menu 與搜尋欄排列在同一列 */
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 a.logo {
@@ -81,10 +92,11 @@ a.logo {
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 75%;
+  margin-top: 1%; 
 }
 
 .search-container {
-  width: 30%;
+  width: 50%;
   margin: 3% 0;
   z-index: 101;
   position: relative;  
@@ -132,7 +144,6 @@ a.logo {
   border-left: 5px; /* 與輸入框連接 */
   background-color: #000000;
   cursor: pointer;
-  border-radius: 0 5px 5px 0;
 }
 
 .search-btn img {
@@ -181,17 +192,14 @@ nav {
 
 /* 手機選單樣式 */
 .mobile-menu {
-  position: relative;
   display: none; /* 根據響應式設計調整 */
-  flex-direction: column;
-  cursor: pointer;
 }
 
 .mobile-menu span {
   height: 3px;
   width: 25px;
   background: #ffffff;
-  margin: 5px 0;
+  margin: 3px 0;
   transition: 0.3s;
 }
 
@@ -200,8 +208,9 @@ nav {
 .custom-divider {
   border: none;                /* 先移除預設邊框 */
   border-top: 5px solid #ccc;   /* 設定上邊框作為分割線 */
-  width: 80%;                  /* 可設定寬度 */
-  margin-left: 20px;    
+  width: 95%;                  /* 可設定寬度 */
+  margin-left: auto;    
+  margin-right: auto;
 }
 .custom-divider-2 {
   border: none;                /* 先移除預設邊框 */
@@ -224,48 +233,85 @@ nav {
     padding-bottom: 15px;
   }
 }
+/* Sidebar 樣式：初始隱藏在左側 */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;  /* 隱藏於畫面左側 */
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: #fff;
+  transition: left 0.3s ease;
+  z-index: 200;
+  padding: 20px;
+}
+/* 當 sidebar active 時，從左側滑出 */
+.sidebar-menu.active {
+  padding-top: 140px;
+  left: 0;
+}
+/* Sidebar 內部樣式 */
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-menu li {
+  margin-top: 5px;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+  background: #696969;
+  border-radius: 3px;
+}
 
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
-@media (max-width: 668px) {
+@media (max-width: 758px) {
   body {
-    padding-top: 130px;
+    padding-top: 140px;
+  }
+  main{
+    margin-top: 1%;
   }
   .header-top {
     flex-direction: column;
+  }
+  .header-right {
+    display: flex;
     align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
   a.logo {
     font-size: 300%;
   }
   .search-container {
-    width: 80%;
     margin-top: 10px; /* 與 logo 分隔一點 */
   }
   #search-input {
     font-size: 0.9rem;  /* 可根據需求調整 */
   }
-  .nav-list {
-    margin: 3px 3px 0 0;
-    display: none;
-    flex-direction: column;
-    background: #acacac;
-    font-weight: bold;
-    position: absolute;
-    top: 10%;
-    right: 0px;
-    width: 150px;
-    border-radius: 5px;
-    border: 3px solid black;
-  }
-  .nav-list.active {
-    display: flex;
-  }
+  /* 顯示 mobile-menu 並排在搜尋欄左側 */
   .mobile-menu {
     display: flex;
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 10px;
   }
+  /* 讓搜尋欄保持在同一行 */
+  .search-container {
+    flex: 1;
+  }
+  nav {
+    display: none;
+  }
+
+ 
   .news-container {
     grid-template-columns: repeat(1, 1fr);
   }
