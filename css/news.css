@@ -130,7 +130,6 @@
 
 /* Pagination 區塊的樣式 */
 .carousel-pagination {
-  dispalay: flex;
   position: absolute;
   bottom: 10px;           /* 根據需求調整距離底部的距離 */
   left: 90%;
