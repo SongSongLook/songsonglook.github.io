@@ -46,7 +46,7 @@ function getQueryParameter(name) {
     } else {
       searchQueryElem.textContent = "Enter something";
       searchQueryElem.classList.add("empty-search");
-      document.getElementById("search-results.empty-search").innerHTML = "<p>Nothing here</p>";
+      document.getElementById("search-results").innerHTML = "<p>Nothing here</p>";
     }
   });
   
