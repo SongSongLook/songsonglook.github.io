@@ -127,11 +127,12 @@ a.logo {
 
 #search-query {
   font-size: 3rem;
-  padding-left: 5px;
+  padding-left: 20px;
 }
 
 #search-results {
   text-align: center;
+  padding-left: 20px;
 }
 /* 搜尋按鈕，利用放大鏡圖案 */
 .search-btn {
