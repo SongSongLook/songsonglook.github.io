@@ -168,7 +168,7 @@ const newsData = [
 const carouselItems = [
   {
     type: "series",  // series 
-    tag: "snp500",
+    tag: "SNP500",
     image: "images/截圖 2024-05-26 下午9.32.11.png",
     title: "Weekly S&P500 analysis",
     description: "click here to find the truth "

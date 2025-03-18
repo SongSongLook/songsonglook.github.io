@@ -151,6 +151,17 @@ a.logo {
   height: 20px;
 }
 
+.search-page {
+  .search-header {
+    padding-top: 15px;
+    font-size: 1.3rem;
+  }
+  .custom-divider{
+    border-top: 3px solid #ccc;
+    padding-bottom: 15px;
+  }
+}
+
 /*---------------------------------------------------*/
 
 /* nav  */
@@ -223,16 +234,6 @@ nav {
 
 /*---------------------------------------------------*/
 
-.search-page {
-  .search-header {
-    padding-top: 15px;
-    font-size: 1.3rem;
-  }
-  .custom-divider{
-    border-top: 3px solid #ccc;
-    padding-bottom: 15px;
-  }
-}
 /* Sidebar 樣式：初始隱藏在左側 */
 .sidebar-menu {
   position: fixed;
@@ -268,6 +269,8 @@ nav {
   background: #696969;
   border-radius: 3px;
 }
+
+/*---------------------------------------------------*/
 
 /* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
 @media (max-width: 758px) {
@@ -310,8 +313,6 @@ nav {
   nav {
     display: none;
   }
-
- 
   .news-container {
     grid-template-columns: repeat(1, 1fr);
   }
