@@ -49,7 +49,7 @@ function renderNews(category = "all", search = "", tag = "") {
 
 /*---------------------------------------------------*/
 
-// 輪播功能：根據 "featured" 標籤選出文章
+// carousel：pick the articles through "featured" 
 let currentSlide = 0;
 let selectedSeriesTag = "";
 
@@ -71,7 +71,7 @@ function renderCarousel() {
       `;
       carouselItem.addEventListener("click", () => {
         history.pushState(null, '', "index.html?tag=" + encodeURIComponent(item.tag));
-        // 更新頁面內容
+        // refresh the content
         document.querySelector(".logo-2").textContent = item.tag;
         renderNews(currentCategory, searchQuery, item.tag);
       });
@@ -111,7 +111,7 @@ function showSlide(index) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 讀取 URL 中的 tag 參數（若有，則以標籤過濾文章）
+  // load the tag parameter from URL （if true, filter the artcles）
   const tagParam = getQueryParameter("tag");
   if (tagParam) {
     currentTag = tagParam;
@@ -122,14 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
   document.querySelectorAll(".mobile-nav-list li").forEach(li => {
     li.addEventListener("click", function() {
-      // 切換 active 狀態
+      // switch active 
       document.querySelectorAll(".mobile-nav-list li").forEach(el => el.classList.remove("active"));
       this.classList.add("active");
 
       currentCategory = this.getAttribute("data-category");
       currentTag = ""; // 切換分類時取消標籤過濾
       renderNews(currentCategory, searchQuery, currentTag);
-      // 隱藏 sidebar
+      // hide sidebar
       const sidebar = document.getElementById("sidebar-menu");
       sidebar.classList.remove("active");
     });
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentSlide + 1);
   }, 3000);  // 每 3 秒切換一次
 
-  // 取得 carousel 容器元素
+  // get carousel container element 
   const carouselContainer = document.querySelector(".carousel-container");
 
   // 當滑鼠進入或觸控開始時暫停自動輪播

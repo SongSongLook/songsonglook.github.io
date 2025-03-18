@@ -234,25 +234,26 @@ nav {
 
 /*---------------------------------------------------*/
 
-/* Sidebar 樣式：初始隱藏在左側 */
+/* Sidebar pattern：initially hide at left */
 .sidebar-menu {
   position: fixed;
   top: 0;
-  left: -250px;  /* 隱藏於畫面左側 */
+  left: -250px;  /* hide at left  */
   width: 250px;
   height: 100%;
   background: #333;
   color: #fff;
   transition: left 0.3s ease;
   z-index: 200;
-  padding: 20px;
+  padding: 140px 20px 20px;
 }
-/* 當 sidebar active 時，從左側滑出 */
+/* Out from left if sidebar active */
 .sidebar-menu.active {
   padding-top: 140px;
   left: 0;
 }
-/* Sidebar 內部樣式 */
+/* Sidebar internal pattern */
+
 .sidebar-menu ul {
   list-style: none;
   padding: 0;
@@ -272,7 +273,7 @@ nav {
 
 /*---------------------------------------------------*/
 
-/* 響應式調整：如在較窄視窗中，調整 header-top 與 nav-list 的顯示 */
+/* RWD */
 @media (max-width: 758px) {
   body {
     padding-top: 140px;
@@ -294,19 +295,19 @@ nav {
     font-size: 300%;
   }
   .search-container {
-    margin-top: 10px; /* 與 logo 分隔一點 */
+    margin-top: 10px; /* apart from the logo  */
   }
   #search-input {
-    font-size: 0.9rem;  /* 可根據需求調整 */
+    font-size: 0.9rem;  
   }
-  /* 顯示 mobile-menu 並排在搜尋欄左側 */
+  /* show mobile-menu and lay left behind the search container */
   .mobile-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
     margin-right: 10px;
   }
-  /* 讓搜尋欄保持在同一行 */
+  /* keep the search container in same row  */
   .search-container {
     flex: 1;
   }
