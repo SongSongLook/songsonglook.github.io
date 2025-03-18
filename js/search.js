@@ -34,16 +34,19 @@ function getQueryParameter(name) {
       });
     }
   }
-
+  
   document.addEventListener("DOMContentLoaded", () => {
     const query = getQueryParameter("q");
     const searchQueryElem = document.getElementById("search-query");
     
     if (query) {
       searchQueryElem.textContent = `Results：${query}`;
+      searchQueryElem.classList.remove("empty-search");
       renderSearchResults(query);
     } else {
       searchQueryElem.textContent = "Enter something";
-      document.getElementById("search-results").innerHTML = "<p>Nothing here</p>";
+      searchQueryElem.classList.add("empty-search");
+      document.getElementById("search-results.empty-search").innerHTML = "<p>Nothing here</p>";
     }
   });
+  
