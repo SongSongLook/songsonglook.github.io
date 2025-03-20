@@ -8,13 +8,13 @@ function getQueryParameter(name) {
   function renderSearchResults(query) {
     const container = document.getElementById("search-results");
     container.innerHTML = "";
-  
     let results = newsData.filter(news =>
       news.title.toLowerCase().includes(query.toLowerCase()) ||
       news.description.toLowerCase().includes(query.toLowerCase())
     );
   
     if (results.length === 0) {
+      container.classList.add("empty-search");
       container.innerHTML = `<p>Nothing match: "<font size="10px">${query}</font>"</p>`;
     } else {
       results.forEach(news => {
@@ -34,7 +34,7 @@ function getQueryParameter(name) {
       });
     }
   }
-  
+
   document.addEventListener("DOMContentLoaded", () => {
     const query = getQueryParameter("q");
     const searchQueryElem = document.getElementById("search-query");
@@ -49,4 +49,4 @@ function getQueryParameter(name) {
       document.getElementById("search-results").innerHTML = "<p>Nothing here</p>";
     }
   });
-  
+
