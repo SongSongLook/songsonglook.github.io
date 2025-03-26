@@ -228,7 +228,7 @@ window.addEventListener("scroll", function() {
   // 取得目前捲動的垂直位置
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  // 向下捲動且超過 150px 後隱藏 nav list
+  // scroll down more than 150px hide nav list
   if (currentScroll > lastScrollTop && currentScroll > 180) {
     nav.style.transform = "translateY(-100%)";  // 隱藏 nav
   } else {
