@@ -74,6 +74,8 @@
 .header-right {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a.logo {

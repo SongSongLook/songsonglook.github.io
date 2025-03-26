@@ -120,6 +120,21 @@ document.addEventListener("DOMContentLoaded", () => {
   renderNews(currentCategory, searchQuery, currentTag);
   renderCarousel();
   
+  document.querySelectorAll(".nav-list li").forEach(li => {
+    li.addEventListener("click", function() {
+      // switch active 
+      document.querySelectorAll(".nav-list li").forEach(el => el.classList.remove("active"));
+      this.classList.add("active");
+
+      currentCategory = this.getAttribute("data-category");
+      currentTag = ""; // 切換分類時取消標籤過濾
+      renderNews(currentCategory, searchQuery, currentTag);
+      // hide sidebar
+      const sidebar = document.getElementById("sidebar-menu");
+      sidebar.classList.remove("active");
+    });
+  });
+
   document.querySelectorAll(".mobile-nav-list li").forEach(li => {
     li.addEventListener("click", function() {
       // switch active 
