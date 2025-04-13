@@ -64,7 +64,6 @@
 
 /* Carousel 輪播區 */
 .carousel-container {
-  padding: 0 15px;
   overflow: hidden;
   margin: 20px auto;
   max-width: 1200px;
@@ -81,7 +80,7 @@
 }
 
 .carousel-item {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(214, 214, 214);
   min-width: 100%;
   box-sizing: border-box;
   padding: 10px;
@@ -128,7 +127,7 @@
 .carousel-pagination {
   position: absolute;
   bottom: 10px;           /* 根據需求調整距離底部的距離 */
-  left: 96%;
+  left: 90%;
   transform: translateX(-50%);
   z-index: 10;            /* 確保位於其他元素上方 */
   text-align: center;
@@ -140,7 +139,7 @@
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;
-  background: #e4e4e4;
+  background: #ffffff;
   border-radius: 50%;
   margin: 0 4px;
   cursor: pointer;

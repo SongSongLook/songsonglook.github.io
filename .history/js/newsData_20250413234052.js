@@ -77,50 +77,10 @@ const newsData = [
       <p><strong>Market Performance and Evaluation</strong></p>
       <p>The Morph Black NFT quickly gained market recognition post-launch, with OpenSea data showing a stable floor price around 1 ETH, reflecting investor confidence in its ecosystem value. As a PayFi innovation, the Black Card aims to merge DeFi’s high returns with traditional finance’s convenience, appealing to Web3-savvy high-net-worth individuals. Its strengths and weaknesses are as follows: The Black Card offers up to 30% annualized yield, a 0.3% low conversion fee, and no annual fee, surpassing traditional banking, while staking (launched April 2025) and airdrops (e.g., BulbaSwap) generate passive income for holder s; the physical card’s luxurious design (22g black gold) and perks (e.g., VIP lounges, Web3 summit tickets) combine utility with status. However, the requirement to purchase an NFT (~$1,700) limits accessibility, returns hinge on DeFi market stability and Morph’s ecosystem growth, and underperforming projects (e.g., BulbaSwap’s low trading volume) could diminish airdrop value; compared to traditional cards (e.g., Amex Platinum), its consumption experience is less robust, with NFT price volatility adding investment risk.</p>
 
-      <p><strong>Passive Income Potential Calculation </strong></p>
-      <p>Assuming an investor purchases one Morph Black NFT at the floor price ($1,700) in April 2025 and stakes it, the estimated passive income over four months (until the physical card launch in July-September 2025) is as follows:</p>
-  <ol>
-    <li>
-      <strong>Staking Rewards:</strong>
-      Assuming a 15% annualized yield, four months yield approximately  $85 .
-    </li>
-    <li>
-      <strong>Ecosystem Airdrops:</strong>
-      Anticipated 1–2 airdrops valued at  $200  each, totaling  $300  (neutral estimate).
-    </li>
-    <li>
-      <strong>One-Time Rewards:</strong>
-      Stakers can mint a Morph Platinum SBTS (approx.  $900 ), with 50% unlocked at TGE, contributing  $675 .
-    </li>
-  </ol>
-  <p>Income Estimates:</p>
-  <ol>
-    <li>
-      <strong>Conservative Scenario:</strong>
-       $428  (staking  $28  + airdrops  $100  + SBTS  $300 ).
-    </li>
-    <li>
-      <strong>Neutral Scenario:</strong>
-       $1,060  (staking  $85  + airdrops  $300  + SBTS  $675 , ~33% of cost).
-    </li>
-    <li>
-      <strong>Optimistic Scenario:</strong>
-      $1,442 (staking $142 + airdrops $400 + SBTS $900).
-    </li>
-  </ol>
-      <p>Risk Warning: Income depends on ecosystem growth and market conditions; staking locks funds for three months, and a falling NFT floor price (e.g., to $500) could offset gains.</p>
-
-      <p><strong>Virtual Card Status</strong></p>
-      <p>As of April 13, 2025, the Morph Black Card’s virtual card is not yet operational, with no official confirmation of its use for online purchases or crypto conversions. Current focus is on NFT staking and the physical card (Q3 2025), with the virtual card potentially launching later or in beta. Investors should monitor the official website (pay.morphl2.io) or X account (@Morph_ZH
-) for updates.</p>
-
-      <p><strong>Risk of Collapse</strong></p>
-      <p>Backed by Bitget and DCS, the Morph Black Card carries credibility, but its high-yield promises and NFT model raise concerns about a potential collapse (failure or fraud). Below is a risk analysis:</p>
-
-
       <p></p>
       
-      <p-last>picture source:https://www.techflowpost.com/article/detail_24623.html<br>All data based as of this writing.<br>Disclaimer: This report is based on public information and does not constitute investment advice. <br>Crypto and NFT investments carry high risks; proceed with caution. </p-last>
+      <p>picture source:https://www.techflowpost.com/article/detail_24623.html</p>
+      <p>All data based as of this writing.</p>
     `,
     tags: ["crypto", "featured"]
     },

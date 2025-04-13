@@ -6,13 +6,6 @@
     margin-bottom: 1rem;     /* 段落下間距 */
     color: #333;             /* 文字顏色 */
   }
-
-  .article-body p-last {
-    font-size: 0.9rem;       /* 文字大小 */
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 1.0;        /* 行高 */
-    color: #333;             /* 文字顏色 */
-  }
   
   /* 調整文章內圖片的樣式 */
   .article-body img {
@@ -56,7 +49,6 @@
   .tag-btn {
     background: #eee;
     border: none;
-    margin-top: 15px;
     padding: 5px 10px;
     margin-right: 5px;
     border-radius: 3px;

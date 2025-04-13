@@ -74,6 +74,8 @@
 .header-right {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a.logo {
@@ -292,14 +294,12 @@ nav {
     margin-top: 1%;
   }
   .header-top {
-    display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
   }
   .header-right {
     display: flex;
     align-items: center;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
   }
