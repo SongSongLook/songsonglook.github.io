@@ -93,8 +93,8 @@ const newsData = [
       Stakers can mint a Morph Platinum SBTS (approx.  $900 ), with 50% unlocked at TGE, contributing  $675 .
     </li>
   </ol>
-  <p>Income Estimates:</p>
-  <ol>
+  <p><strong>&emsp;Income Estimates:</strong></p>
+  <ul>
     <li>
       <strong>Conservative Scenario:</strong>
        $428  (staking  $28  + airdrops  $100  + SBTS  $300 ).
@@ -107,7 +107,7 @@ const newsData = [
       <strong>Optimistic Scenario:</strong>
       $1,442 (staking $142 + airdrops $400 + SBTS $900).
     </li>
-  </ol>
+  </ul>
       <p>Risk Warning: Income depends on ecosystem growth and market conditions; staking locks funds for three months, and a falling NFT floor price (e.g., to $500) could offset gains.</p>
 
       <p><strong>Virtual Card Status</strong></p>
@@ -116,13 +116,61 @@ const newsData = [
 
       <p><strong>Risk of Collapse</strong></p>
       <p>Backed by Bitget and DCS, the Morph Black Card carries credibility, but its high-yield promises and NFT model raise concerns about a potential collapse (failure or fraud). Below is a risk analysis:</p>
+      <p><strong>&emsp; Positive Factors</strong></p>
 
+      <ul>
+        <li>
+          <strong>Backing from Bitget and DCS reduces froud  risk . </strong>
+        </li>
+        <li>
+          <strong>NFT trading volume (223 ETH) and stable floor price (about 1ETH). </strong>
+        </li>
+        <li>
+          <strong>Staking and physical card plans (2025 Q3) demonstrate execution . </strong>
+        </li>
+      </ul>
 
+       <p><strong>&emsp; Risk Factors</strong></p>
+
+      <ul>
+        <li>
+          <strong>Yield risk:</strong>
+            The 30% yield risk relies on DeFi stability; market volitility or protocol flawws could cause loses.      
+        </li>
+        <li>
+          <strong>Ecosystem uncertainty:</strong>
+            A weak TGE (Q2 2025) or projects (e.g., Bulba swap) could devalue benefits.
+        </li>
+        <li>
+          <strong>Operational problems:</strong>
+          Delays or subpar physcial  card functionally could erode trust. 
+        </li>
+        <li>
+        <strong>Regularoty Pressure:</strong>
+          Tightening global crypto regulations may limit features.
+        </li>
+      </ul>
+
+      <p><strong>Collapse Probability:</strong></p>
+      <ul>
+        <li>
+          <strong>Short-Term (in 2025):</strong>
+            10-20%, due to strong backing and strong traction. 
+        </li>
+        <li>
+          <strong>Mid-Term (2026-2027):</strong>
+          30-40%, depending on ecosystem and yield delivery.
+        </li>
+        <li>
+        <strong>Long-Term (2028-):</strong>
+          Contingent on Morph's market standing.
+        </li>
+      </ul>
       <p></p>
       
-      <p-last>picture source:https://www.techflowpost.com/article/detail_24623.html<br>All data based as of this writing.<br>Disclaimer: This report is based on public information and does not constitute investment advice. <br>Crypto and NFT investments carry high risks; proceed with caution. </p-last>
+      <p-last>Sources: https://www.techflowpost.com/article/detail_24623.html<br>All data based as of this writing.<br>Disclaimer: This report is based on public information and does not constitute investment advice. <br>Crypto and NFT investments carry high risks; proceed with caution. </p-last>
     `,
-    tags: ["crypto", "featured"]
+    tags: ["crypto", "featured"], Authors: ["look"]
     },
   ];
 

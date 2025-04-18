@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     tagsHtml += `</div>`;
   }
   
+  let AuthorHtml = "";
+
   articleContainer.innerHTML = `
     <h1>${article.title}</h1>
     <img src="${article.image}" alt="${article.title}">
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ${article.fullContent}
     </div>
     ${tagsHtml}
+    ${AuthorHtml}
   `;
 });
 

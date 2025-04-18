@@ -63,7 +63,6 @@
     cursor: pointer;
     transition: background 0.3s;
   }
-  
   .tag-btn:hover {
     background: #ddd;
   }
@@ -99,20 +98,22 @@ ol > li::before {
   color: #000000;
 }
 
+ul {
+  position: relative;
+  padding-left: 60px;       /* 為數字保留空間 */
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #000000;
+}
+
 /* 內嵌的無序列表（例如詳細項目） */
 ol li ul {
   list-style-type: disc;    /* 使用圓點作為標記 */
   margin-left: 30px;        /* 與父層對齊 */
   padding-left: 20px;
-}
-
-/* 如果你希望內嵌列表項的文字也進行美化 */
-ol li ul li {
-  font-family:'Times New Roman', Times, serif
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #000000;
-  margin-bottom: 5px;
 }
 
 /* 如有需要，可針對 <strong> 標籤增加強調效果 */
