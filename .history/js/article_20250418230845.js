@@ -29,16 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tagsHtml += `</div>`;
   }
   
-  // 生成作者區塊
-  const authorHtml = article.author
-    ? `<div class="article-author">Author: ${article.author}</div>`
-    : "";
-
-  // 將 tags 與 author 包進同一列
-  const footerHtml = `<div class="article-footer">
-      ${tagsHtml}
-      ${authorHtml}
-    </div>`;
+  let AuthorHtml = "";
 
   articleContainer.innerHTML = `
     <h1>${article.title}</h1>
@@ -46,6 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="article-body">
       ${article.fullContent}
     </div>
-    ${footerHtml}
+    ${tagsHtml}
+    ${AuthorHtml}
   `;
 });
+
+
