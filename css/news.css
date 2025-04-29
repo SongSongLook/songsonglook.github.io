@@ -64,27 +64,25 @@
 
 /* Carousel 輪播區 */
 .carousel-container {
-  padding: 0 15px;
   overflow: hidden;
   margin: 20px auto;
-  max-width: 1200px;
-  max-height: 100%;
+  max-width: 1500px;
   position: relative;
   border-radius: 5px;
 }
 
 .carousel {
   display: flex;
-  position: relative;
   transition: transform 0.5s ease;
-  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .carousel-item {
   background-color: rgb(255, 255, 255);
-  min-width: 100%;
+  flex: 0 0 100%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 0 20px;      /* 左右 gutter */
+  padding-top: 10px;
   border-radius: 5px;
 }
 .carousel-item img {
@@ -115,13 +113,6 @@
 }
 .carousel-next {
   right: 10px;
-}
-.carousel-container {
-  position: relative;  /* 讓內部的 absolute 元素以此為參考 */
-  overflow: hidden;
-  margin: 0px auto;
-  max-width: 1200px;
-
 }
 
 /* Pagination 區塊的樣式 */
@@ -154,6 +145,22 @@
 
 @media (max-width: 758px) {
   .carousel-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .news-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 20px;
+    font-size: 1rem;
+  }
+  .news-content h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .news-card {
+    width: 100%;
+    display: block;
+    max-height: 300px;
   }
 }
