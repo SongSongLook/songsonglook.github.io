@@ -24,7 +24,7 @@ const newsData = [
     },
     {
       id: 2,
-      title: "Morph Black NFT and Card:<br>An Innovative Attempt at Web3 High-End Finance",
+      title: "Morph Black NFT and Card: <br> An Innovative Attempt at Web3 High-End Finance",
       category: "crypto",
       description: "04/13/25 UTC+8",
       image: "images/2025032719221225318018.jpg",
