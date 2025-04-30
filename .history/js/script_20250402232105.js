@@ -1,13 +1,9 @@
 // script.js
 
-import { newsData } from "./data/newsData.js";
-import { carouselItems } from "./data/carouselItems.js";
-
 // 全域變數：目前分類、搜尋關鍵字及標籤過濾
 let currentCategory = "all";
 let searchQuery = "";
 let currentTag = ""; // 當首頁以 ?tag=... 過濾文章時使用
-
 
 // 取得 URL 參數的函式
 function getQueryParameter(name) {
