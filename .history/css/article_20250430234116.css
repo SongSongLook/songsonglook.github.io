@@ -53,37 +53,7 @@
     margin-bottom: 20px;
   }
 
-  /* Sources 區塊 */
-.article-sources {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px dashed #ccc;
-}
-
-.article-sources p {
-  margin: 0 0 0.5rem;
-  font-weight: bold;
-}
-
-.article-sources ul {
-  list-style: disc inside;
-  margin: 0 0 1rem;
-  padding-left: 1rem;
-}
-
-/* 文章尾端的固定聲明區 */
-.article-disclaimer {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.article-disclaimer p {
-  margin: 0rem;
-}
-
+  /* 文章尾部：標籤 + 作者 同一列 */
 .article-footer {
   display: flex;
   justify-content: space-between;
@@ -91,6 +61,8 @@
   margin-top: 0;      /* 與內文分隔 */
   flex-wrap: wrap;       /* 若畫面較窄可換行 */
 }
+
+/* 作者文字樣式 */
 .article-author {
   margin-top: 15px;
   padding: 5px 10px;
@@ -99,19 +71,20 @@
   color: #000000;
   font-family: 'Times New Roman', Times, serif;
 }
-.tag-btn {
-  background: #eee;
-  border: none;
-  margin-top: 15px;
-  padding: 5px 10px;
-  margin-right: 5px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.tag-btn:hover {
-  background: #ddd;
-}
+
+  .tag-btn {
+    background: #eee;
+    border: none;
+    margin-top: 15px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .tag-btn:hover {
+    background: #ddd;
+  }
 
     /* 重設有序列表 */
 ol {
