@@ -41,18 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ${tagsHtml}
       ${authorHtml}
     </div>`;
-  
-  let sourcesHtml = "";
-  if (article.sources && article.sources.length) {
-    sourcesHtml = `<div class="article-sources">
-      <p><strong>Sources</strong></p>
-      <ul>`;
-    article.sources.forEach(src => {
-      sourcesHtml += `<li><a href="${src}" target="_blank" rel="noopener">${src}</a></li>`;
-    });
-    sourcesHtml += `</ul>
-    </div>`;
-  }
 
   articleContainer.innerHTML = `
     <h1>${article.title}</h1>
@@ -61,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ${article.fullContent}
     </div>
     ${footerHtml}
-    ${sourcesHtml}
     <div class="article-disclaimer">
       <p>All data based as of this writing.</p>
       <p>Disclaimer: This report is based on public information and does not constitute investment advice.</p>

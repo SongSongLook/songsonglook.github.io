@@ -143,11 +143,9 @@ export default {
       </li>
     </ul>
     <p></p>
+    
+    <p-last>Sources: https://www.techflowpost.com/article/detail_24623.html<br>All data based as of this writing.<br>Disclaimer: This report is based on public information and does not constitute investment advice. <br>Crypto and NFT investments carry high risks; proceed with caution. </p-last>
   `,
-  sources: [
-    "https://www.techflowpost.com/article/detail_24623.html"
-  ],
   tags: ["crypto", "featured"],
   author: "HEXA" 
   };
-  // 

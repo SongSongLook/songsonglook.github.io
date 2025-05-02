@@ -144,9 +144,7 @@ export default {
     </ul>
     <p></p>
   `,
-  sources: [
-    "https://www.techflowpost.com/article/detail_24623.html"
-  ],
+  sources: [],
   tags: ["crypto", "featured"],
   author: "HEXA" 
   };

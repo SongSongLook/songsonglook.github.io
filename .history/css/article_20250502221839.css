@@ -1,0 +1,151 @@
+/* 調整文章內所有段落的文字樣式 */
+.article-body p {
+    font-size: 1.2rem;       /* 文字大小 */
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.8;        /* 行高 */
+    margin-bottom: 1rem;     /* 段落下間距 */
+    color: #333;             /* 文字顏色 */
+  }
+
+  .article-body p-last {
+    font-size: 0.9rem;       /* 文字大小 */
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.0;        /* 行高 */
+    color: #333;             /* 文字顏色 */
+  }
+  
+  /* 調整文章內圖片的樣式 */
+  .article-body img {
+    width: 100%;             /* 自適應寬度 */
+    max-width: 600px;        /* 限制最大寬度 */
+    display: block;          /* 使圖片為區塊元素 */
+    margin: 20px auto;       /* 上下間距並置中顯示 */
+    border-radius: 5px;      /* 選擇性圓角效果 */
+  }
+  
+  /* 可針對其他 HTML 標籤增加額外樣式 */
+  .article-body h2,
+  .article-body h3 {
+    color: #222;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  article {
+    padding: 20px;
+    background: #ffffff;
+    margin: 20px;
+    border-radius: 5px;
+  }
+  
+  article h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size:  300%;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  article img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+/* 文章尾端的固定聲明區 */
+.article-disclaimer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.article-disclaimer p {
+  margin: 0rem;
+}
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;      /* 與內文分隔 */
+  flex-wrap: wrap;       /* 若畫面較窄可換行 */
+}
+.article-author {
+  margin-top: 15px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 0.9rem;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+}
+.tag-btn {
+  background: #eee;
+  border: none;
+  margin-top: 15px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.tag-btn:hover {
+  background: #ddd;
+}
+
+    /* 重設有序列表 */
+ol {
+  counter-reset: item;      /* 重設計數器 */
+  list-style: none;         /* 隱藏預設列表符號 */
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+/* 每個有序列表項 */
+ol > li {
+  position: relative;
+  padding-left: 30px;       /* 為數字保留空間 */
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* 利用 CSS counter 產生自訂的數字前綴 */
+ol > li::before {
+  counter-increment: item;  /* 遞增計數器 */
+  content: counter(item) ". ";  /* 顯示數字及點 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #000000;
+}
+
+ul {
+  position: relative;
+  padding-left: 60px;       /* 為數字保留空間 */
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* 內嵌的無序列表（例如詳細項目） */
+ol li ul {
+  list-style-type: disc;    /* 使用圓點作為標記 */
+  margin-left: 30px;        /* 與父層對齊 */
+  padding-left: 20px;
+}
+
+/* 如有需要，可針對 <strong> 標籤增加強調效果 */
+ol li strong {
+  color: #000000;
+  font-size: 1.1rem;
+}
