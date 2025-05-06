@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
   
-  // 生成標籤按鈕區塊（點擊後回首頁並以該標籤過濾）
+  // tags
   let tagsHtml = "";
   if (article.tags && article.tags.length > 0) {
     tagsHtml = `<div class="article-tags"><span><font face="Gill Sans"><b>TAGS: </b></font></span>`;
@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
     tagsHtml += `</div>`;
   }
   
-  // 生成作者區塊
+  // author
   const authorHtml = article.author
     ? `<div class="article-author">Author: ${article.author}</div>`
     : "";
 
-  // 將 tags 與 author 包進同一列
+  // tags and author in same row 
   const footerHtml = `<div class="article-footer">
       ${tagsHtml}
       ${authorHtml}

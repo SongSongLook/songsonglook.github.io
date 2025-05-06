@@ -12,6 +12,12 @@ export const carouselItems = [
       id: 2,
       image: "images/2025032719221225318018.jpg",
       title: "What is morph black card?"
-    }    
+    },
+    {
+      type: "featured", // display specific article 
+      id: 3,
+      image: "images/1719601353-usd-twd.png.jpeg",
+      title: "台幣升值？"
+    } 
   ];
   

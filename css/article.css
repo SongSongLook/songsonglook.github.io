@@ -70,6 +70,21 @@
   margin: 0 0 1rem;
   padding-left: 1rem;
 }
+.article-sources li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+/* 連結樣式：加底線並 hover 變色 */
+.article-sources a {
+  color: #0056b3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.article-sources a:hover {
+  color: #003f7f;
+  text-decoration: underline;
+}
 
 /* 文章尾端的固定聲明區 */
 .article-disclaimer {
