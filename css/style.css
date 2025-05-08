@@ -234,9 +234,9 @@ nav {
   margin-left: auto;    
   margin-right: auto;
 }
-.custom-divider-2 {cv hjk ]\;'/'
+.custom-divider-2 {
   border: none;                /* 先移除預設邊框 */
-  border-top: 2px solid #ccc;   /* 設定上邊框作為分割線 */
+  border-top: 1.5px solid #000000;   /* 設定上邊框作為分割線 */
   margin: 3px 0px 3px 0px;              /* 設定上下間距 */
   width: 80%;                  /* 可設定寬度 */
   margin-left: auto;           /* 置中對齊 */

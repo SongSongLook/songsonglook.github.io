@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="article-disclaimer">
       <p>All data based as of this writing.</p>
       <p>Disclaimer: This report is based on public information and does not constitute investment advice.</p>
-      <p>Crypto and NFT investments carry high risks; proceed with caution.</p>
+      <p>CFD, Crypto and NFT investments carry high risks; proceed with caution.</p>
     </div>
   `;
 });

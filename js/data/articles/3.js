@@ -97,4 +97,3 @@ export default {
   tags: ["Taiwan", "中文", "Finance"],
   author: "HEXA"
 };
-
